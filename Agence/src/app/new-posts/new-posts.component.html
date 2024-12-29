@@ -1,0 +1,23 @@
+
+<a role="button" [routerLink]="['/posts']">Retour</a>
+
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header bg-primary text-white text-center">
+      <h3>Ajouter un Nouveau Post</h3>
+    </div>
+    <div class="card-body">
+      <form id="postForm">
+        <div class="mb-3">
+          <label for="title" class="form-label">Titre</label>
+          <input type="text" class="form-control" id="title" name="title" placeholder="Entrez le titre" required>
+        </div>
+        <div class="mb-3">
+          <label for="body" class="form-label">Contenu</label>
+          <textarea class="form-control" id="body" name="body" rows="4" placeholder="Écrivez le contenu ici..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Envoyer</button>
+      </form>
+    </div>
+  </div>
+</div>

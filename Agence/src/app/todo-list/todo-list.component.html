@@ -1,0 +1,33 @@
+
+<ul class="list-group">
+  <!-- Parcourt chaque élément de todoList -->
+  <li
+    *ngFor="let todo of todoList"
+    class="list-group-item d-flex justify-content-between align-items-center"
+    (click)="showDetails(todo)"
+    style="cursor: pointer;"
+  >
+    <!-- Affiche uniquement le titre du todo -->
+    <span> todo :{{ todo.id }}</span>
+
+    <!-- Icône Bootstrap pour indiquer la possibilité de voir plus de détails -->
+    <span class="badge bg-primary rounded-pill">
+      <i class="bi bi-info-circle"></i>
+    </span>
+
+    <!-- Affiche les détails du todo sélectionné uniquement si c'est le todo actuellement sélectionné -->
+    <div *ngIf="selectedTodo === todo" class="card mt-2 p-3 bg-light">
+      <div class="card-body">
+        <h5 class="card-title">{{ todo.title }}</h5>
+        <p class="card-text">
+          <strong>Completed:</strong> {{ todo.completed ? 'Yes' : 'No' }}
+        </p>
+        <p class="card-text">
+          <strong>userId: {{todo.userId}}</strong>
+        </p>
+      </div>
+    </div>
+  </li>
+</ul>
+
+
