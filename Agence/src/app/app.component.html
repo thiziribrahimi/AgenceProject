@@ -1,4 +1,5 @@
 <h1><a [routerLink]="['/']">{{ title }}</a></h1>
+
 <nav>
   <ul>
     <li><a [routerLink]="['/posts']">Liste posts</a></li>
@@ -9,14 +10,16 @@
 <!-- Barre de recherche -->
 <app-search-bar (searchTermChanged)="handleSearch($event)"></app-search-bar>
 
+<!-- Résultats de recherche -->
 <div>
-  <!-- Affichage des résultats filtrés -->
-  <ul>
-    <li *ngFor="let item of filteredItems">
-      <strong>{{ item.type }}</strong> - {{ item.location }} - 
-      <em>{{ item.price | currency:'EUR' }}</em>
-    </li>
-  </ul>
+  <h2>Logemments</h2>
+  <div class="logements-container">
+    <div class="logement-item" *ngFor="let item of filteredItems">
+      <div class="logement-type">{{ item.type }}</div>
+      <div class="logement-location">{{ item.location }}</div>
+      <div class="logement-price">€{{ item.price | number:'1.0-2' }}</div>
+    </div>
+  </div>
 </div>
 
 <router-outlet></router-outlet>

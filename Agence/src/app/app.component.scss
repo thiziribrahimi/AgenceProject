@@ -16,4 +16,45 @@ nav {
     text-decoration: none;
     color: blue;
   }
+  .logements-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  
+    .logement-item {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      width: 250px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+  
+      .logement-type {
+        font-weight: bold;
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+  
+      .logement-location {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+      }
+  
+      .logement-price {
+        font-size: 16px;
+        color: #007BFF;
+        font-weight: bold;
+      }
+    }
+  }
   

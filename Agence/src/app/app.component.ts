@@ -39,7 +39,7 @@ export class AppComponent {
     { type: 'Duplex', location: 'Strasbourg', price: 700000 },
     { type: 'Penthouse', location: 'Cannes', price: 2500000 },
   ];
-  
+
   // Liste filtrée pour l'affichage
   filteredItems = [...this.items];
 
@@ -47,9 +47,9 @@ export class AppComponent {
   handleSearch(term: string) {
     const lowerTerm = term.toLowerCase();
     this.filteredItems = this.items.filter(item =>
-      item.type.toLowerCase().includes(lowerTerm) ||
-      item.location.toLowerCase().includes(lowerTerm) ||
-      item.price.toString().includes(lowerTerm)
+      item.type.toLowerCase().includes(lowerTerm) || // Filtrage par type
+      item.location.toLowerCase().includes(lowerTerm) || // Filtrage par localisation
+      item.price.toString().includes(lowerTerm) // Filtrage par prix
     );
   }
 }
