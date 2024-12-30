@@ -19,8 +19,13 @@ export class DetailPostsComponent {
 
   constructor() {
     this.postId = Number(this.route.snapshot.params['postId']);
-    this.postsService.getPostsById(this.postId).then((post: Post) => {
-      this.postDetail = post;
-    });
+    const post = this.postsService.getPostsById(this.postId); // Appel direct
+    if (post) {
+      this.postDetail = post; // Assigner directement
+    } else {
+      console.error('Post introuvable');
+      this.postDetail = null;
+    }
   }
+  
 }

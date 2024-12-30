@@ -1,32 +1,32 @@
 <header class="header">
     <div class="container">
-      <h1 class="title"><a [routerLink]="['/']">{{ title }}</a></h1>
+      <h1 class="title">{{ title }}</h1>
       <nav class="menu">
         <ul>
-          <li><a [routerLink]="['/posts']">Liste posts</a></li>
-          <li><a [routerLink]="['/todos']">Liste todos</a></li>
+          <li><a routerLink="/posts">Liste posts</a></li>
+          <li><a routerLink="/todos">Liste todos</a></li>
         </ul>
       </nav>
-      <!-- Barre de recherche intégrée au header -->
+      <!-- Barre de recherche -->
       <div class="search-bar-container">
         <app-search-bar (searchTermChanged)="handleSearch($event)"></app-search-bar>
       </div>
     </div>
   </header>
-  
   <main class="content">
-    <!-- Résultats de recherche -->
-    <section>
-      
-      <div class="logements-container">
-        <div class="logement-item" *ngFor="let item of filteredItems">
+    <!-- Contenu principal -->
+    <div class="logements-container">
+      <div class="logement-item" *ngFor="let item of filteredItems">
+        <img [src]="item.image" alt="{{ item.type }}" class="logement-image" />
+
+
+        <div class="logement-details">
           <div class="logement-type">{{ item.type }}</div>
           <div class="logement-location">{{ item.location }}</div>
-          <div class="logement-price">€{{ item.price | number:'1.0-2' }}</div>
+          <div class="logement-price">{{ item.price | number:'1.0-2' }}</div>
         </div>
       </div>
-    </section>
+    </div>
+    <router-outlet></router-outlet>
   </main>
-  
-  <router-outlet></router-outlet>
   

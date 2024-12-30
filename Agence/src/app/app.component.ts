@@ -26,18 +26,18 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 export class AppComponent {
   title = 'Agence';
 
-  // Liste des biens immobiliers
+  // Liste des biens immobiliers avec images
   items = [
-    { type: 'Appartement', location: 'Paris 16ème', price: 750000 },
-    { type: 'Maison', location: 'Lyon 5ème', price: 650000 },
-    { type: 'Studio', location: 'Marseille 1er', price: 120000 },
-    { type: 'Villa', location: 'Nice', price: 1250000 },
-    { type: 'Loft', location: 'Bordeaux', price: 850000 },
-    { type: 'Terrain', location: 'Lille', price: 300000 },
-    { type: 'Appartement', location: 'Nantes', price: 400000 },
-    { type: 'Maison', location: 'Toulouse', price: 550000 },
-    { type: 'Duplex', location: 'Strasbourg', price: 700000 },
-    { type: 'Penthouse', location: 'Cannes', price: 2500000 },
+    { type: 'Appartement', location: 'Paris 16ème', price: 750000, image: 'assets/images/appartement 16eme paris.png' },
+    { type: 'Maison', location: 'Lyon 5ème', price: 650000, image: 'assets/images/maisonLyon.png' },
+    { type: 'Studio', location: 'Marseille 1er', price: 120000, image: 'assets/images/studio marseille.png' },
+    { type: 'Villa', location: 'Nice', price: 1250000, image: 'assets/images/villa_nice.png' },
+    { type: 'Loft', location: 'Bordeaux', price: 850000, image: 'assets/images/loft_bordeaux.png' },
+    { type: 'Terrain', location: 'Lille', price: 300000, image: 'assets/images/terrain_lille.png' },
+    { type: 'Appartement', location: 'Nantes', price: 400000, image: 'assets/images/appartement_nantes.png' },
+    { type: 'Maison', location: 'Toulouse', price: 550000, image: 'assets/images/maison_toulouse.png' },
+    { type: 'Duplex', location: 'Strasbourg', price: 700000, image: 'assets/images/duplex_strasbourg.png' },
+    { type: 'Penthouse', location: 'Cannes', price: 2500000, image: 'assets/images/penthouse_cannes.png' },
   ];
 
   // Liste filtrée pour l'affichage

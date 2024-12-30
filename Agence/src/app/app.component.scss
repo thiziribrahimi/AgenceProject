@@ -83,25 +83,32 @@ ul {
 
 /* Styles pour les logements */
 .logements-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Taille minimum ajustée */
-  gap: 15px; /* Espacement réduit */
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
 
 .logement-item {
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px; /* Padding réduit */
+  padding: 16px;
+  width: 250px;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.logement-item:hover {
+  transform: translateY(-4px);
+}
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
+.logement-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
 
   .logement-type {
     font-size: 1.2rem; /* Taille réduite */
@@ -121,7 +128,6 @@ ul {
     font-weight: bold;
     color: #007acc;
   }
-}
 
 /* Responsiveness */
 @media (max-width: 768px) {
