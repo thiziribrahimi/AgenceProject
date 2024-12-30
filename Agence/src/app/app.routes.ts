@@ -8,7 +8,7 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    title: 'Page Accueil',
+    title: 'ImmoRoyal',
   },
   {
     path: 'posts',

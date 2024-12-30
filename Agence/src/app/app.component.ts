@@ -24,7 +24,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Agence';
+  title = 'ImmoRoyal';
 
   // Liste des biens immobiliers avec images
   items = [
